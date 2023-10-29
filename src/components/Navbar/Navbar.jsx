@@ -68,7 +68,7 @@ const Navbar = () => {
 
       <div className={classes["nav-functions"]}>
         {/* <div className={classes["fnc-trade"]}>Trade</div> */}
-        <GreenButton content='Trade'/>
+        <GreenButton content="Trade" />
         <div className={classes["fnc-wallet"]}>
           <LuWallet2 />
           <p>Connect Wallet</p>

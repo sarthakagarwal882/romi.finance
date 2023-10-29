@@ -1,0 +1,42 @@
+
+.benefit-wrapper {
+    background: #191919;
+    border-top: 1px solid #4d4d4e;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .benefits {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 3rem 0;
+  }
+  
+  .benefit {
+    padding: 1.3rem 0;
+  }
+  
+  .benifit-title {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: normal;
+    margin-left: 0.8rem;
+  }
+  
+  .benifit-description {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    max-width: 16.5rem;
+    color: #cecece;
+    letter-spacing: 0;
+  }
+  
+  .benifit-icon {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0.8rem;
+    font-size: 1.1rem;
+  }
+  

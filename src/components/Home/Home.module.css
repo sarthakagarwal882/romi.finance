@@ -4,28 +4,27 @@
   padding: 4rem 0;
   position: relative;
 }
-.home{
-    padding: 0 2.7rem;
+.home {
+  padding: 0 2.7rem;
 }
 
-.home h1{
-    font-size: 3.6rem;
-    font-weight: 700;
-    letter-spacing: -0.6px;
+.home h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: -0.6px;
 }
-.home p{
-    width: 35%;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    margin: 1.5rem 0;
+.home p {
+  width: 35%;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin: 1.5rem 0;
 }
 
 .Home-latest-info-container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    padding:3rem 2.7rem 0.6rem;
-    width: 100%;
-    max-width: 100rem;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 3rem 2.7rem 0.6rem;
+  width: 100%;
+  max-width: 100rem;
+}
