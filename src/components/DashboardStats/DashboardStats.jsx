@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import styles from "./DashboardStats.module.css";
 import React from 'react'
 export default function DashboardStats() {

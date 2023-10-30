@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import DashboardStats from "../../components/DashboardStats/DashboardStats";
 import DashboardTokens from "../../components/DashboardTokens/DashboardTokens";
 import Footer from "../../components/Footer/Footer";

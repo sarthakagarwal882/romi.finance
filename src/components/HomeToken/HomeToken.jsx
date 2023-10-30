@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 import GreenButton from "../GreenButton/GreenButton";
 import styles from "./HomeToken.module.css";

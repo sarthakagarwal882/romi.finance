@@ -5,3 +5,7 @@
 .pie-section{
     position: relative;
 }
+
+.custom-tooltip{
+    padding: 0.6rem 1rem;
+}

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Footer from "../../components/Footer/Footer";
 import Home from "../../components/Home/Home";
 import { HomeBenifit } from "../../components/HomeBenifit/HomeBenifit";

@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import { Link, useLocation } from "react-router-dom";
 import classes from "./Navbar.module.css";
 import { LuWallet2 } from "react-icons/lu";

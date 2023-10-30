@@ -2,7 +2,7 @@
   "name": "romi.finance",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://sarthakagarwal882.github.io/react-gh-pages",
+  "homepage": "https://sarthakagarwal882.github.io/romi.finance/react-gh-pages",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
