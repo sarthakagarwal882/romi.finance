@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classes from "./Navbar.module.css";
 import { LuWallet2 } from "react-icons/lu";
 import { BsThreeDotsVertical } from "react-icons/bs";
@@ -23,10 +24,14 @@ const Navbar = () => {
       <div className={classes.menu}>
         <ul>
           <li>
+          <Link to={'/'}>
             <p>Home</p>
+          </Link>
           </li>
           <li>
+          <Link to={'/dashboard'}>
             <p>Dashboard</p>
+          </Link>
           </li>
           <li
             onMouseOver={handleNftDropOver}
@@ -67,7 +72,6 @@ const Navbar = () => {
       </div>
 
       <div className={classes["nav-functions"]}>
-        {/* <div className={classes["fnc-trade"]}>Trade</div> */}
         <GreenButton content="Trade" />
         <div className={classes["fnc-wallet"]}>
           <LuWallet2 />

@@ -59,6 +59,11 @@
   width: 100%;
 }
 
+.menu ul li a{
+ text-decoration: none;
+ color: #a7a7a9;
+}
+
 .menu ul li {
   list-style: none;
   margin: auto;
