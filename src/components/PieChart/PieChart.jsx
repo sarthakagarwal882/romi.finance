@@ -20,7 +20,7 @@ export default function PieCharts(props) {
     COLORS = ["#0598fa", "#5c0af5"];
   }
 
-  const CustomTooltip = ({ active, payload, label }) => {
+  const CustomTooltip = ({ active, payload,}) => {
     if (active && payload && payload.length) {
       if (payload[0].value === 94)
         return (
