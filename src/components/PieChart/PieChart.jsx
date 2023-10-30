@@ -1,87 +1,74 @@
-import { useRef, useState } from "react";
-import { PieChart, Pie, Sector, Cell } from "recharts";
+/* eslint-disable no-constant-condition */
+/* eslint-disable react/prop-types */
+import { PieChart, Pie, Cell, Tooltip } from "recharts";
+import "./PieChart.css";
+export default function PieCharts(props) {
+  const { partition } = props;
+  let data, COLORS;
 
-export default function PieCharts() {
-  let elementRef = useRef(null);
-  const data = [
-    { name: "Group A", value: 400 },
-    { name: "Group B", value: 300 },
-  ];
-  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
-  const [state, setState] = useState({
-    "Group A": false,
-    "Group B": false,
-  });
-  function handleOver(e) {
-    e.preventDefault();
-    let name = e.target.getAttribute("name");
-    // console.log("Over");
-    if (state[name] === false) {
-      setState((prevValue) => {
-        return { ...prevValue, [name]: true };
-      });
-      
-      setTimeout(() => {
-        // console.log(elementRef.current )
-        console.log((document.activeElement));
-        if (elementRef.current && elementRef.current.contains(document.activeElement)) {
-          setState((prevValue) => {
-            return { ...prevValue, [name]: false };
-          });
-        }
-      }, 50);
+  if (partition === true) {
+    data = [
+      { name: "Group B", value: 6 },
+      { name: "Group A", value: 94 },
+    ];
+    COLORS = ["#5c0af5", "#0598fa"];
+  } else {
+    data = [
+      { name: "Group B", value: 49.5 },
+      { name: "Group A", value: 50.5 },
+    ];
+    COLORS = ["#0598fa", "#5c0af5"];
+  }
+
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      if (payload[0].value === 94)
+        return (
+          <div className="custom-tooltip">
+            <p className="label">{`${payload[0].value}% in liquidity`}</p>
+          </div>
+        );
+      if (payload[0].value === 6)
+        return (
+          <div className="custom-tooltip">
+            <p className="label">{`${payload[0].value}% not staked`}</p>
+          </div>
+        );
+      if (payload[0].value === 49.5)
+        return (
+          <div className="custom-tooltip">
+            <p className="label">{`${payload[0].value}% USDC`}</p>
+          </div>
+        );
+      if (payload[0].value === 50.5)
+        return (
+          <div className="custom-tooltip">
+            <p className="label">{`${payload[0].value}% ETH`}</p>
+          </div>
+        );
     }
-  }
-
-  function handleLeave(e) {
-    e.preventDefault();
-    let name = e.target.getAttribute("name");
-    // console.log("leave");
-    // if (state[name] === true)
-    setState((prevValue) => {
-      return { ...prevValue, [name]: false };
-    });
-  }
+    return null;
+  };
 
   return (
-    <PieChart width={800} height={400}>
+    <PieChart width={170} height={170}>
       <Pie
         data={data}
-        cx={120}
-        cy={200}
-        innerRadius={70}
+        cx={81}
+        cy={80}
+        innerRadius={72}
         outerRadius={80}
         fill="#8884d8"
-        paddingAngle={5}
-        dataKey="value"
-      >
-        {data.map((entry, index) => (
-          <Cell
-            ref={elementRef}
-            key={`cell-${index}`}
-            onMouseOver={handleOver}
-            onMouseLeave={handleLeave}
-            onMouseEnter={handleLeave}
-            fill={state[entry.name] ? "#666" : "#000"}
-          />
-        ))}
-      </Pie>
-      <Pie
-        data={data}
-        cx={420}
-        cy={200}
-        startAngle={180}
-        endAngle={0}
-        innerRadius={60}
-        outerRadius={80}
-        fill="#8884d8"
-        paddingAngle={5}
+        startAngle={90}
+        endAngle={450}
+        paddingAngle={2}
         dataKey="value"
       >
         {data.map((entry, index) => (
           <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
         ))}
       </Pie>
+      <Tooltip content={CustomTooltip} />
     </PieChart>
   );
 }
