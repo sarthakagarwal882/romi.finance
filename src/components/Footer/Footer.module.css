@@ -36,6 +36,10 @@
   cursor: pointer;
 }
 
+.Footer-social-link-block svg:hover{
+  color: #ffffff;
+}
+
 .Footer-link {
   color: #e6e6ea;
   font-size: 0.9rem;

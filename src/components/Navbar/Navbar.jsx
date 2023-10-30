@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import classes from "./Navbar.module.css";
 import { LuWallet2 } from "react-icons/lu";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GreenButton from "../GreenButton/GreenButton";
 const Navbar = () => {
+  const location = useLocation();
+  const [activeLink, setActiveLink] = useState("home");
   const [nftDropdown, setNftDropdown] = useState(0);
 
   const handleNftDropOver = () => {
@@ -14,24 +16,33 @@ const Navbar = () => {
     setNftDropdown(0);
   };
 
+  useEffect(() => {
+    console.log(activeLink);
+    console.log(location.pathname);
+    if (location.pathname === "/dashboard") setActiveLink("dashboard");
+    else if (location.pathname === "/earn") setActiveLink("earn");
+  }, []);
+
   return (
     <nav className={classes.navbar}>
-      <div className={classes.header}>
-        <img src="/assets/logo.png" alt="" />
-        <h1>Romi Finance</h1>
-      </div>
+      <Link to={"/"}>
+        <div className={classes.header}>
+          <img src="/assets/logo.png" alt="" />
+          <h1>Romi Finance</h1>
+        </div>
+      </Link>
 
       <div className={classes.menu}>
         <ul>
           <li>
-          <Link to={'/'}>
-            <p>Home</p>
-          </Link>
+            <Link to={"/"} className={(activeLink==="home")&&(classes.active)}>
+              <p>Home</p>
+            </Link>
           </li>
           <li>
-          <Link to={'/dashboard'}>
-            <p>Dashboard</p>
-          </Link>
+            <Link to={"/dashboard"} className={(activeLink==="dashboard")&&(classes.active)}>
+              <p>Dashboard</p>
+            </Link>
           </li>
           <li
             onMouseOver={handleNftDropOver}
@@ -54,7 +65,9 @@ const Navbar = () => {
             </div>
           </li>
           <li>
+            <Link to={'/earn'} className={(activeLink==="earn")&&(classes.active)}>
             <p>Earn</p>
+            </Link>
           </li>
           <li>
             <p>Buy</p>

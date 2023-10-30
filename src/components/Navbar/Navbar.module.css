@@ -9,7 +9,10 @@
   background: transparent 0% 0% no-repeat padding-box;
   border-bottom: 1px solid #ffffff10;
 }
-
+.navbar>a{
+  text-decoration: none;
+  color: #ffffff;
+}
 .navbar::after {
   height: 0.6rem;
   width: 100%;
@@ -171,3 +174,8 @@
   height: 1.1rem;
   background-color: var(--dark-blue-border);
 }
+
+.active{
+  color: #ffffff !important;
+}
+
