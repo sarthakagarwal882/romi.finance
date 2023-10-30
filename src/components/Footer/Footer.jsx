@@ -3,6 +3,7 @@ import { AiOutlineMedium } from "react-icons/ai";
 import { FaTelegram } from "react-icons/fa";
 import { IoLogoDiscord } from "react-icons/io5";
 import { BsTwitter, BsGithub } from "react-icons/bs";
+import React from 'react'
 export default function Footer() {
   return (
     <div className={styles["Footer-wrapper"]}>

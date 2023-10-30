@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import styles from "./HomeCard.module.css";
-
+import React from 'react'
 export default function HomeCard(props) {
   let img = "";
   let title = "";

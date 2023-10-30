@@ -2,6 +2,7 @@
 /* eslint-disable react/prop-types */
 import { PieChart, Pie, Cell, Tooltip } from "recharts";
 import "./PieChart.css";
+import React from 'react'
 export default function PieCharts(props) {
   const { partition } = props;
   let data, COLORS;

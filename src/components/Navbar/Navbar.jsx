@@ -4,6 +4,7 @@ import { LuWallet2 } from "react-icons/lu";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import GreenButton from "../GreenButton/GreenButton";
+import React from 'react'
 const Navbar = () => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState("home");

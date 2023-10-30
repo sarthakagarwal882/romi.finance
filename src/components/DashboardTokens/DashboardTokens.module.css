@@ -101,6 +101,13 @@
 
 .chart-pie {
   margin: 2rem 0;
+  position: relative;
+}
+
+.chart-pie>p{
+  position: absolute;
+  top: 44%;
+  left: 27%;
 }
 
 .tkn-ch-single-line {

@@ -4,6 +4,7 @@ import { HomeBenifit } from "../../components/HomeBenifit/HomeBenifit";
 import HomeToken from "../../components/HomeToken/HomeToken";
 import Navbar from "../../components/Navbar/Navbar";
 import styles from "./HomePage.module.css";
+import React from 'react'
 
 export default function HomePage() {
   return (

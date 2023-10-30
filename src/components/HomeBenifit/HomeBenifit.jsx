@@ -1,5 +1,5 @@
 import styles from "./HomeBenifit.module.css";
-
+import React from 'react'
 export function HomeBenifit() {
   return (
     <div className={styles["benefit-wrapper"]}>

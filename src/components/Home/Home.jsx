@@ -1,7 +1,7 @@
 import GreenButton from "../GreenButton/GreenButton";
 import HomeCard from "../HomeCard/HomeCard";
 import styles from "./Home.module.css";
-
+import React from 'react'
 export default function Home() {
   return (
     <div className={styles["home-wrapper"]}>

@@ -1,6 +1,7 @@
 import PieCharts from "../PieChart/PieChart";
 import styles from "./DashboardTokens.module.css";
 import { BsChevronDown } from "react-icons/bs";
+import React from 'react'
 export default function DashboardTokens() {
   return (
     <div className={styles.tokens}>
@@ -72,6 +73,7 @@ export default function DashboardTokens() {
 
           <div className={styles["chart-pie"]}>
             <PieCharts partition={true}/>
+            <p>Distribution</p>
           </div>
         </div>
 
@@ -115,6 +117,7 @@ export default function DashboardTokens() {
 
           <div className={styles["chart-pie"]}>
           <PieCharts partition={false}/>
+          <p>$ZLP Pool</p>
           </div>
         </div>
       </div>

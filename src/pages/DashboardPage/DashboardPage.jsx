@@ -3,6 +3,7 @@ import DashboardTokens from "../../components/DashboardTokens/DashboardTokens";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import styles from "./DashboardPage.module.css";
+import React from 'react'
 
 export default function DashboardPage() {
   return (

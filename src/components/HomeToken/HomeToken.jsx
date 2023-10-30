@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import GreenButton from "../GreenButton/GreenButton";
 import styles from "./HomeToken.module.css";
-
+import React from 'react'
 export default function HomeToken() {
   return (
     <div className={styles["Home-token-card-section"]}>
